@@ -1,168 +1,96 @@
-
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-CO">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#126a9e">
-  <title>Samaro Medical | Equipos y Tecnología</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #edf2f6;
-      color: #26333d;
-    }
-    .card {
-      max-width: 480px;
-      margin: 30px auto;
-      background: white;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 8px 30px #0002;
-    }
-    header {
-      background: linear-gradient(135deg,#10476d,#1687bf);
-      color: white;
-      padding: 42px 20px 32px;
-      text-align: center;
-    }
-    header h1 { margin: 12px 0 5px; font-size: 30px; }
-    header p { margin: 0; opacity: .9; }
-    .symbol {
-      width: 74px;
-      height: 74px;
-      border-radius: 20px;
-      background: white;
-      color: #126a9e;
-      display: grid;
-      place-items: center;
-      margin: auto;
-      font-size: 46px;
-      font-weight: bold;
-    }
-    main { padding: 26px 24px; }
-    .intro { text-align: center; line-height: 1.6; }
-    h2 { color: #126a9e; font-size: 19px; }
-    .services {
-      background: #f0f6fa;
-      padding: 18px;
-      border-radius: 14px;
-      margin: 25px 0;
-    }
-    .services p { margin: 13px 0; font-size: 14px; }
-    .btn {
-      display: block;
-      text-decoration: none;
-      text-align: center;
-      padding: 15px;
-      border-radius: 12px;
-      margin: 12px 0;
-      color: white;
-      background: #126a9e;
-      font-weight: bold;
-    }
-    .whatsapp { background: #16864d; }
-    .outline {
-      color: #126a9e;
-      background: white;
-      border: 2px solid #126a9e;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #f5f7f9;
-      font-size: 12px;
-      color: #667784;
-    }
-    @media(max-width:520px) {
-      .card { margin: 0; border-radius: 0; min-height: 100vh; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101c2d">
+<meta name="description" content="Samaro Medical. Ingeniería biomédica, mantenimiento, calibración y tecnología oftalmológica en Manizales, Caldas.">
+<link rel="canonical" href="https://alegonzagomez113ag-glitch.github.io/samaro-medical/">
+<title>Samaro Medical | Tarjeta digital</title>
+<style>
+:root{color-scheme:light;--ink:#101c2d;--muted:#4c5d70;--blue:#124ca6;--line:#d8e1ec;--paper:#f2f5f9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.55 system-ui,sans-serif}
+main{max-width:1056px;margin:auto;padding:clamp(12px,3vw,36px)}
+h1,h2,h3,p{margin:0}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid #327ae7;outline-offset:4px}
+svg{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 100% 0%,#1b4375,transparent 69%),#101c2d;color:#fff;border-radius:24px;padding:clamp(24px,5.4vw,60px);box-shadow:0 14px 30px #142e4e20}
+.hero::before{content:"";position:absolute;z-index:-1;inset:0;background:repeating-radial-gradient(circle at 98% 15%,transparent 0 31px,#a0caff13 32px 33px,transparent 34px 58px);mask-image:linear-gradient(90deg,transparent 35%,black)}
+.brand{display:flex;align-items:center;gap:12px;font-size:.91rem;font-weight:750;letter-spacing:.09em;text-transform:uppercase}
+.brand img{display:block;width:clamp(136px,18vw,172px);height:auto;max-width:100%;object-fit:contain;background:#f5f5f5;border:9px solid #f5f5f5;border-radius:10px}
+.brand img[hidden]{display:none}
+.brand:has(img:not([hidden])) .brand-name{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.brand-name{border-left:3px solid #8bbcff;padding-left:12px}
+.eyebrow{font-size:.72rem;letter-spacing:.16em;font-weight:750;text-transform:uppercase;color:var(--blue)}
+.hero .eyebrow{color:#b8d5ff;margin-top:clamp(19px,3vw,32px)}
+h1{font-size:clamp(2.2rem,6.2vw,4.85rem);letter-spacing:-.065em;line-height:1.02;margin-top:10px;max-width:13ch;text-wrap:balance}
+.intro{margin-top:16px;color:#e0eafa;max-width:46ch}
+.location{display:flex;align-items:center;gap:8px;margin-top:20px;color:#c5dcff;font-size:.91rem}
+.location svg{width:18px;height:18px}
+.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0 clamp(28px,5vw,48px)}
+.button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:10px 8px;text-align:center;background:#fff;border:1px solid var(--line);border-radius:12px;font-weight:700;font-size:.9rem}
+.button svg{width:18px;height:18px;color:var(--blue)}
+.button.primary{background:var(--blue);color:white;border-color:var(--blue)}
+.button.primary svg{color:inherit}
+.button:hover{border-color:#779aca;background:#eaf2ff}
+.button.primary:hover{background:#103d86}
+h2{font-size:clamp(1.55rem,4vw,2.5rem);letter-spacing:-.045em;line-height:1.15;margin:5px 0 17px}
+.services{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.service{display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start;padding:16px;border-radius:15px;border:1px solid var(--line);background:white}
+.icon-box{display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:#edf4ff;color:var(--blue)}
+h3{font-size:1rem;line-height:1.3}
+.service p{margin-top:4px;color:var(--muted);font-size:.89rem}
+footer{margin-top:24px;border-top:1px solid var(--line);padding:16px 0 6px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;color:var(--muted);font-size:.82rem}
+footer strong{color:var(--ink)}
+@media(min-width:690px){.actions{grid-template-columns:repeat(4,minmax(0,1fr))}.services{grid-template-columns:repeat(2,minmax(0,1fr))}.service{padding:22px}}
+@media(forced-colors:active){.button.primary{border:1px solid ButtonText}}
+</style>
 </head>
 <body>
-  <div class="card">
-    <header>
-      <div class="symbol">✚</div>
-      <h1>Samaro Medical</h1>
-      <p>Equipos y Tecnología</p>
-      <p style="margin-top:14px;font-size:14px">
-        📍 Manizales, Caldas · Colombia
-      </p>
-    </header>
+<svg aria-hidden="true" width="0" height="0" style="position:absolute;width:0;height:0">
+<symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="chat" viewBox="0 0 24 24"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L4 20l1-3.8a8.5 8.5 0 1 1 15.5-4.7Z"/><path d="M9 8.5c0 3.5 2 5.5 5.5 6l1-1.5-2-1-1 1c-1.5-.5-2.2-1.2-2.6-2.5l.8-.8-1-2Z"/></symbol>
+<symbol id="contact" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><circle cx="12" cy="9" r="2.4"/><path d="M8 16.5c.4-3.4 7.6-3.4 8 0"/></symbol>
+<symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+<symbol id="instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+<symbol id="pulse" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="14" rx="3"/><path d="M5 11h3l2-3.5 3 7 2-3.5h4M9 21h6"/></symbol>
+<symbol id="sliders" viewBox="0 0 24 24"><path d="M6 3v6m0 4v8m6-18v10m0 4v4m6-18v3m0 4v11"/><circle cx="6" cy="11" r="2"/><circle cx="12" cy="15" r="2"/><circle cx="18" cy="8" r="2"/></symbol>
+<symbol id="eye" viewBox="0 0 24 24"><path d="M2 12s3.8-6 10-6 10 6 10 6-3.8 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.8"/></symbol>
+<symbol id="book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2.2-9-1v13c3-1.2 6-1 9 1 3-2 6-2.2 9-1V5c-3-1.2-6-1-9 1Zm0 0v13"/></symbol>
+</svg>
+<main>
+  <header class="hero">
+    <div class="brand">
+      <img src="./logo.jpeg" alt="" hidden onload="this.hidden=false">
+      <span class="brand-name">Samaro Medical</span>
+    </div>
+    <p class="eyebrow">Tarjeta digital</p>
+    <h1>Tecnología para la salud</h1>
+    <p class="intro">Ingeniería biomédica y soporte técnico para equipos médicos y oftalmológicos.</p>
+    <p class="location"><svg aria-hidden="true"><use href="#pin"/></svg>Manizales, Caldas · Colombia</p>
+  </header>
 
-    <main>
-      <p class="intro">
-        Soluciones en ingeniería biomédica,
-        mantenimiento, calibración y tecnología médica.
-      </p>
+  <nav class="actions" aria-label="Opciones de contacto">
+    <a class="button primary" href="https://wa.me/573107721289"><svg aria-hidden="true"><use href="#chat"/></svg>WhatsApp</a>
+    <a class="button" href="./samaro-medical.vcf" download><svg aria-hidden="true"><use href="#contact"/></svg>Guardar contacto</a>
+    <a class="button" href="mailto:samaromedical@gmail.com"><svg aria-hidden="true"><use href="#mail"/></svg>Correo</a>
+    <a class="button" href="https://www.instagram.com/samaro_medical/"><svg aria-hidden="true"><use href="#instagram"/></svg>Instagram</a>
+  </nav>
 
-      <section class="services">
-        <h2>Nuestros servicios</h2>
-        <p>🔧 Mantenimiento preventivo y correctivo</p>
-        <p>⚙️ Calibración y verificación de equipos</p>
-        <p>👁️ Tecnología oftalmológica</p>
-        <p>🎓 Asesoría y capacitación técnica</p>
-      </section>
+  <section aria-labelledby="servicios">
+    <p class="eyebrow">Equipos y tecnología</p>
+    <h2 id="servicios">Nuestros servicios</h2>
+    <ul class="services">
+      <li class="service"><span class="icon-box"><svg aria-hidden="true"><use href="#pulse"/></svg></span><div><h3>Mantenimiento biomédico</h3><p>Mantenimiento preventivo y correctivo de equipos médicos.</p></div></li>
+      <li class="service"><span class="icon-box"><svg aria-hidden="true"><use href="#sliders"/></svg></span><div><h3>Calibración y verificación</h3><p>Revisión de las mediciones y del funcionamiento de los equipos.</p></div></li>
+      <li class="service"><span class="icon-box"><svg aria-hidden="true"><use href="#eye"/></svg></span><div><h3>Tecnología oftalmológica</h3><p>Soporte técnico para equipos de oftalmología.</p></div></li>
+      <li class="service"><span class="icon-box"><svg aria-hidden="true"><use href="#book"/></svg></span><div><h3>Asesoría y capacitación</h3><p>Orientación técnica para el uso y cuidado de los equipos.</p></div></li>
+    </ul>
+  </section>
 
-      <a class="btn whatsapp"
-         href="https://wa.me/573107721289"
-         target="_blank" rel="noopener">
-        WhatsApp
-      </a>
-
-      <a class="btn"
-         href="mailto:samaromedical@gmail.com">
-        Correo electrónico
-      </a>
-
-      <a class="btn"
-         href="https://www.instagram.com/samaro_medical/"
-         target="_blank" rel="noopener">
-        Instagram
-      </a>
-
-      <a class="btn outline" id="saveContact"
-         href="#">
-        Guardar contacto
-      </a>
-    </main>
-
-    <footer>
-      Samaro Medical · Equipos y Tecnología<br>
-      Manizales, Caldas · Colombia
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById("saveContact")
-      .addEventListener("click", function(e) {
-        e.preventDefault();
-        const vcard = [
-          "BEGIN:VCARD",
-          "VERSION:3.0",
-          "FN:Samaro Medical",
-          "ORG:Samaro Medical",
-          "TEL;TYPE=WORK,CELL:+573107721289",
-          "EMAIL:samaromedical@gmail.com",
-          "ADR;TYPE=WORK:;;;Manizales;Caldas;;Colombia",
-          "URL:https://www.instagram.com/samaro_medical/",
-          "END:VCARD"
-        ].join("\r\n");
-
-        const blob = new Blob([vcard], {
-          type: "text/vcard;charset=utf-8"
-        });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = "Samaro-Medical.vcf";
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
-      });
-  </script>
+  <footer><strong>Samaro Medical</strong><span>Manizales, Caldas</span></footer>
+</main>
 </body>
 </html>
